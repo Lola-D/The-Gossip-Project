@@ -1,0 +1,6 @@
+<%= form_for ([@gossip, @comment]) do |f| %>
+  <div class="form-group">
+    <%= f.text_field :content, class:"form-control", id:"formGroupExampleInput2", style:"width:290px; height:100px;"%>
+  </div>
+  <button type="submit" class="btn btn-primary mb-3" style="width:290px;">Ajouter un commentaire</button>
+<% end %>

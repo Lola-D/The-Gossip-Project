@@ -1,0 +1,15 @@
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-secondary">
+  <div class="col-md-6 px-0">
+    <h1 class="display-4 font-italic">Le gossip n°<%=@gossip.id%></h1>
+    <h5 class="card-title"><%=@gossip.title%></h5>
+    <p class="card-text"><%=@gossip.content%></p> 
+    <div class="card-link">Ecrit par <%= link_to @gossip.user.first_name, user_path(@gossip.user.id) %></div>
+    <p class="card-text">De <%= link_to @gossip.user.city.name, cities_path(@gossip.user.city_id)%></p>
+    <div class="btn btn-info btn-lg mt-3 mb-3 mr-3" role="button" aria-pressed="true" style="width:200px;"> <%= link_to "Editer", edit_gossip_path(@gossip.id) %></div>
+    <div class="btn btn-danger btn-lg" role="button" aria-pressed="true" style="width:200px;"> <%= link_to 'Supprimer', gossip_path(@gossip.id), method: :delete, data: { confirm: 'Etes-vous sûr ?' } %></div>
+  </div>
+</div>
+
+
+<%= render 'comments/form'%>
+<%= render 'comments/comment'%>

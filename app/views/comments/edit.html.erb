@@ -1,0 +1,13 @@
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Edition d'un Commentaire</h1>
+    </div>
+  </div>
+
+
+<%= form_tag url_for(action: 'update'), method: "patch" do %>
+  <div class="form-group">
+      <%= text_field_tag 'content', @comment.content, class:"form-control", id:"formGroupExampleInput", style:"width:500px;" %>
+  </div>
+  <button type="submit" class="btn btn-primary" style="width:500px;">Editer</button>  
+<% end %>

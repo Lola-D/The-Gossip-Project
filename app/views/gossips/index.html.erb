@@ -1,0 +1,28 @@
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Bienvenue !</h1>
+      <p>The Gossip Project est une application qui te permet de poster des potins !</p>
+      <div class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style="width:200px;"> <%= link_to "Poster un Gossip", new_gossip_path %></div>
+    </div>
+  </div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titre</th>
+      <th scope="col">Auteur</th>
+      <th scope="col">Commentaires</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @gossips.each do |gossip| %>
+      <tr>
+        <th scope="row"><%= gossip.id %></th>
+        <td><%= link_to gossip.title, gossip_path(gossip.id) %></td>
+        <td><%= link_to gossip.user.first_name, user_path(gossip.user.id)%></td>
+        <td><%= gossip.comments.count %> commentaires</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
