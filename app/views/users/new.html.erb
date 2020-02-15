@@ -33,7 +33,7 @@
         <div  class="col-md-8"><%= f.password_field :password, class: "form-control" %></div>
       </div>
 
-      <div class="orm-group row">
+      <div class="form-group row">
         <%= label_tag :city_id, "Ta ville:", class: "col-md-4 control-label" %>
         <div  class="col-md-8"><%= select_tag :city_id, options_from_collection_for_select(City.all, :id, :name), class: "form-control"  %></div>
       </div>
