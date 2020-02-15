@@ -4,7 +4,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true, format: { with: /\w+@\w+\.{1}[a-zA-Z]{2,}/, message: "please enter a valid email" }
   validates :password, presence: true, length: { minimum: 6 }
 
-  belongs_to :city, optional: true
+  belongs_to :city
   has_many :gossips
   has_many :comments
   has_many :likes
