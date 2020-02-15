@@ -8,11 +8,12 @@ class UsersController < ApplicationController
   end
 
   def new
+    @cities = City.all
     @user = User.new
   end
   
   def create
-    user_params = params.require(:user).permit(:first_name, :last_name, :email, :password, :city)
+    user_params = params.require(:user).permit(:first_name, :last_name, :email, :password, :city_id)
     @user= User.new(user_params)
     if @user.save
       session[:user_id] = @user.id

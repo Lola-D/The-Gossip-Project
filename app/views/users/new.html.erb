@@ -35,9 +35,9 @@
 
       <div class="form-group row">
         <%= label_tag :city_id, "Ta ville:", class: "col-md-4 control-label" %>
-        <div  class="col-md-8"><%= select_tag :city_id, options_from_collection_for_select(City.all, :id, :name), class: "form-control"  %></div>
+        <div  class="col-md-8"><%= f.select :city_id, City.all.collect { |c| [ c.name, c.id ] }, :prompt => 'Choisis une ville', class: "form-control" %></div>
       </div>
-
+      
       <div class="form-group row mt-3">
         <div class="col-md-8 col-md-offset-4">
           <button type="submit" class="btn btn-primary">S'inscrire</button>
