@@ -7,3 +7,5 @@
 ```cd airdnd```
 
 ```bundle install```
+
+http://gossip-project-app.herokuapp.com/
