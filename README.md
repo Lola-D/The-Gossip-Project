@@ -1,24 +1,9 @@
-# README
+# The Gossip Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### Poster, lire et commenter des potins
 
-Things you may want to cover:
+```git clone https://github.com/Lola-D/The-Gossip-Project.git```
 
-* Ruby version
+```cd airdnd```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bundle install
